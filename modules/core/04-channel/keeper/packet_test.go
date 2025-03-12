@@ -1118,6 +1118,7 @@ func (suite *KeeperTestSuite) TestAcknowledgePacket() {
 			ack = ibcmock.MockAcknowledgement.Acknowledgement()
 
 			path = ibctesting.NewPath(suite.chainA, suite.chainB)
+			ctx := suite.chainA.GetContext()
 
 			tc.malleate()
 
